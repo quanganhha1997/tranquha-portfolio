@@ -264,3 +264,32 @@ h2 {
   opacity: 1;
   transform: scale(1);
 }
+
+.portfolios .portfolio-item .hover-items {
+  flex-direction: column;
+}
+
+.portfolios .portfolio-item .hover-items h3 {
+  margin-bottom: 1.5rem;
+}
+
+.portfolios .portfolio-item .hover-items .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolios .portfolio-item .hover-items .icons .icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolios .portfolio-item .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--color-black);
+}
