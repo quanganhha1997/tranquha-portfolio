@@ -21,7 +21,7 @@
         <div class="right-header">
           <h1 class="name">
             Hello, I'm <span>Anh Ha.</span><br />
-            I'm a Developer
+            I'm a <span id="input"></span>
           </h1>
           <p>
             This website provides a glimpse of my past projects and my
@@ -342,5 +342,14 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#input", {
+        strings: ["Developer", "Designer", "Dog Lover"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true,
+      });
+    </script>
   </body>
 </html>
