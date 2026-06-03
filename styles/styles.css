@@ -120,3 +120,39 @@ h2 {
   padding: 1rem;
   color: var(--color-white);
 }
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+}
+
+.about-container .left-about p {
+  line-height: 2rem;
+  padding: 1rem;
+  padding-left: 0;
+  color: var(--color-secondary);
+}
+
+.about-container .left-about h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.main-title {
+  text-align: center;
+}
+
+.main-title h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--color-brown-0);
+}
+
+.main-title h2 span {
+  color: var(--color-secondary);
+}
