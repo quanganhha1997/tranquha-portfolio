@@ -268,10 +268,37 @@
             </div>
 
             <div class="right-contact">
-              <form class="contact-form">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                class="contact-form"
+                id="contact-form"
+              >
                 <div class="input-control i-c-2">
-                  <input type="text" placeholder="NAME" />
-                  <input type="email" placeholder="EMAIL" />
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="58ad36d1-4d06-4791-8e9c-3a382c7e9"
+                  />
+                  <input type="text" name="name" required placeholder="NAME" />
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="EMAIL"
+                  />
+                  <input
+                    type="text"
+                    name="subject"
+                    required
+                    placeholder="ENTER SUBJECT"
+                  />
+                  <textarea
+                    name="message"
+                    cols="15"
+                    rows="8"
+                    placeholder="PLEASE ENTER YOUR MESSAGE HERE..."
+                  ></textarea>
                 </div>
 
                 <div class="input-control">
@@ -284,6 +311,14 @@
                     rows="8"
                     placeholder="PLEASE ENTER YOUR MESSAGE HERE..."
                   ></textarea>
+                </div>
+                <div class="submit-btn">
+                  <a href="#" class="main-btn" onclick="submitEmail()">
+                    <span class="btn-text">SEND</span>
+                    <span class="btn-icon"
+                      ><i class="fas fa-arrow-right"></i
+                    ></span>
+                  </a>
                 </div>
               </form>
             </div>

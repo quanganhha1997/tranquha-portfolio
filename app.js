@@ -9,3 +9,7 @@
     });
   });
 })();
+
+function submitEmail() {
+  document.getElementById("contact-form").submit();
+}
