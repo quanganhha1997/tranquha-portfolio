@@ -1,38 +1,58 @@
-// (function () {
-//   [...document.querySelectorAll(".control")].forEach((button) => {
-//     button.addEventListener("click", function () {
-//       document.querySelector(".active-btn").classList.remove("active-btn");
-//       this.classList.add("active-btn");
-//       document.querySelector(".active").classList.remove("active");
-//       document.getElementById(button.dataset.id).classList.add("active");
-//     });
-//   });
-// })();
+/**
+ * app.js — Anh Ha Portfolio
+ *
+ * Features:
+ *  1. Active nav link highlight based on scroll position
+ *  2. Dynamic footer copyright year
+ *  3. Typed.js initialisation
+ */
 
-// function submitEmail() {
-//   document.getElementById("contact-form").submit();
-// }
+/* ─── 1. Active nav on scroll ─────────────────────────────────── */
 
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll("nav .nav-links li");
+(function initNavHighlight() {
+  const sections = document.querySelectorAll("main section");
+  const navItems = document.querySelectorAll("#desktop-nav .nav-links li");
 
-window.addEventListener("scroll", () => {
-  let current = "";
+  if (!sections.length || !navItems.length) return;
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
+  function updateActiveNav() {
+    let currentId = "";
 
-    if (window.scrollY >= sectionTop - sectionHeight / 3) {
-      current = section.getAttribute("id");
-    }
+    sections.forEach((section) => {
+      // Activate a section when its top edge is within the top third of the viewport
+      if (window.scrollY >= section.offsetTop - section.clientHeight / 3) {
+        currentId = section.getAttribute("id");
+      }
+    });
+
+    navItems.forEach((li) => {
+      li.classList.toggle("active", li.classList.contains(currentId));
+    });
+  }
+
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+
+  // Set correct state on page load (handles direct hash links)
+  updateActiveNav();
+})();
+
+/* ─── 2. Footer year ──────────────────────────────────────────── */
+
+(function setFooterYear() {
+  const yearEl = document.getElementById("footer-year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();
+
+/* ─── 3. Typed.js ─────────────────────────────────────────────── */
+
+(function initTyped() {
+  const el = document.getElementById("typed-output");
+  if (!el || typeof Typed === "undefined") return;
+
+  new Typed("#typed-output", {
+    strings: ["Programmer", "Problem Solver", "Developer", "Dog Lover"],
+    typeSpeed: 100,
+    backSpeed: 80,
+    loop: true,
   });
-
-  navItems.forEach((li) => {
-    li.classList.remove("active");
-
-    if (li.classList.contains(current)) {
-      li.classList.add("active");
-    }
-  });
-});
+})();

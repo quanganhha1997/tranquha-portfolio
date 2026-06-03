@@ -4,30 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anh Ha Portfolio</title>
+    <meta
+      name="description"
+      content="Anh Ha — Software Developer portfolio showcasing projects in AI, data engineering, cloud, and full-stack web development."
+    />
+    <title>Anh Ha | Software Developer</title>
 
-    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
   </head>
 
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Anh Ha</div>
-      <ul class="nav-links">
+    <!-- ─── Navigation ─────────────────────────────────────────────── -->
+    <nav id="desktop-nav" aria-label="Main navigation">
+      <div class="logo" aria-hidden="true">Anh Ha</div>
+      <ul class="nav-links" role="list">
         <li class="home active"><a href="#home">Home</a></li>
         <li class="about"><a href="#about">About</a></li>
         <li class="portfolio"><a href="#portfolio">Projects</a></li>
@@ -35,6 +42,7 @@
       </ul>
     </nav>
 
+    <!-- ─── Hero ───────────────────────────────────────────────────── -->
     <header id="home" class="header">
       <div class="header-content">
         <div class="left-header">
@@ -46,18 +54,18 @@
         <div class="right-header">
           <h1 class="name">
             Hello, I'm <span>Anh Ha.</span><br />
-            I'm a <span id="input"></span>
+            I'm a <span id="typed-output"></span>
           </h1>
-
           <p>
             This website provides a glimpse of my past projects and my
             capabilities as a software developer.
           </p>
-
           <div class="btn-con">
             <a href="Anh Ha Resume.pdf" class="main-btn" download>
               <span class="btn-text">Download Resume</span>
-              <span class="btn-icon"><i class="fas fa-arrow-down"></i></span>
+              <span class="btn-icon" aria-hidden="true">
+                <i class="fas fa-arrow-down"></i>
+              </span>
             </a>
           </div>
         </div>
@@ -65,111 +73,125 @@
     </header>
 
     <main>
-      <section id="about" class="about">
+      <!-- ─── About ──────────────────────────────────────────────────── -->
+      <section id="about" class="about" aria-labelledby="about-heading">
         <div class="main-title">
-          <h2>About <span>Me</span></h2>
+          <h2 id="about-heading">About <span>Me</span></h2>
         </div>
 
         <div class="about-container">
           <div class="left-about">
-            <h4>What I Do</h4>
+            <h3>What I Do</h3>
             <p>
               Hello! I'm Anh Ha, a Computer Science graduate student at Portland
               State University with a passion for software engineering,
               data-driven applications, and AI-powered solutions.
             </p>
             <p>
-              My experience includes full-stack web development, cloud-based
+              My experience spans full-stack web development, cloud-based
               systems, machine learning applications, and data engineering
-              projects. I enjoy building tools that solve real-world problems,
+              projects. I enjoy building tools that solve real-world problems —
               whether that means improving access to information, processing
-              large-scale datasets, or creating secure and user-friendly
+              large-scale datasets, or creating secure, user-friendly
               applications.
             </p>
           </div>
         </div>
 
-        <h4 class="stat-title">My Timeline</h4>
+        <h3 class="stat-title">My Timeline</h3>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="tl-icon"><i class="fas fa-book"></i></div>
-            <p class="tl-duration">2015 - 2016</p>
-            <h5>Foundation Program</h5>
-            <span class="company"> - University of Liverpool</span>
-
+        <div class="timeline" role="list">
+          <article class="timeline-item" role="listitem">
+            <div class="tl-icon" aria-hidden="true">
+              <i class="fas fa-book"></i>
+            </div>
+            <p class="tl-duration">2015 – 2016</p>
+            <h4>Foundation Program</h4>
+            <span class="company">University of Liverpool</span>
             <p>
-              Completed a university foundation program that prepared me for
-              studying Computer Science and software development at the
-              university level.
+              Completed a university foundation programme that prepared me for
+              studying Computer Science and software development at degree
+              level.
             </p>
-          </div>
+          </article>
 
-          <div class="timeline-item">
-            <div class="tl-icon"><i class="fas fa-book"></i></div>
-            <p class="tl-duration">2016 - 2022</p>
-            <h5>B.Sc in Computer Science</h5>
-            <span class="company"> - Oregon State University</span>
+          <article class="timeline-item" role="listitem">
+            <div class="tl-icon" aria-hidden="true">
+              <i class="fas fa-book"></i>
+            </div>
+            <p class="tl-duration">2016 – 2022</p>
+            <h4>B.Sc in Computer Science</h4>
+            <span class="company">Oregon State University</span>
             <p>
-              Earned a Bachelor's degree in Computer Science while developing
-              strong foundations in software engineering, databases, algorithms,
-              and web development.
+              Earned a Bachelor's degree in Computer Science, building strong
+              foundations in software engineering, databases, algorithms, and
+              web development.
             </p>
-          </div>
+          </article>
 
-          <div class="timeline-item">
-            <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
-            <p class="tl-duration">2021 - 2022</p>
-            <h5>Operations Representative</h5>
-            <span class="company"> - Oregon State University</span>
-
+          <article class="timeline-item" role="listitem">
+            <div class="tl-icon" aria-hidden="true">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <p class="tl-duration">2021 – 2022</p>
+            <h4>Operations Representative</h4>
+            <span class="company">Oregon State University</span>
             <p>
               Supported daily operations, customer service, and facility
               management while developing communication and problem-solving
               skills in a fast-paced environment.
             </p>
-          </div>
+          </article>
 
-          <div class="timeline-item">
-            <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
-            <p class="tl-duration">2021 - 2022</p>
-            <h5>University Teaching Assistant</h5>
-            <span class="company"> - Oregon State University</span>
+          <article class="timeline-item" role="listitem">
+            <div class="tl-icon" aria-hidden="true">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <p class="tl-duration">2021 – 2022</p>
+            <h4>University Teaching Assistant</h4>
+            <span class="company">Oregon State University</span>
             <p>
-              Worked with students in engineering and computer science courses,
-              helping them understand technical concepts and complete project
-              assignments.
+              Helped engineering and computer science students understand
+              technical concepts and complete project assignments.
             </p>
-          </div>
+          </article>
 
-          <div class="timeline-item">
-            <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
-            <p class="tl-duration">2022 - 2023</p>
-            <h5>Customer Representative</h5>
-            <span class="company"> - Samaritan Health Services</span>
+          <article class="timeline-item" role="listitem">
+            <div class="tl-icon" aria-hidden="true">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <p class="tl-duration">2022 – 2023</p>
+            <h4>Customer Representative</h4>
+            <span class="company">Samaritan Health Services</span>
             <p>
               Provided customer support and resolved service requests while
-              maintaining a positive user experience across multiple
-              communication channels.
+              maintaining a positive user experience across multiple channels.
             </p>
-          </div>
+          </article>
 
-          <div class="timeline-item">
-            <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
-            <p class="tl-duration">2022 - Present</p>
-            <h5>IT Coordinator & Developer</h5>
-            <span class="company"> - Lemongrass</span>
+          <article class="timeline-item" role="listitem">
+            <div class="tl-icon" aria-hidden="true">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <p class="tl-duration">2022 – Present</p>
+            <h4>IT Coordinator &amp; Developer</h4>
+            <span class="company">Lemongrass</span>
             <p>
               Designed and developed software solutions for restaurant
               operations, focusing on usability, performance, and scalability.
             </p>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section id="portfolio" class="portfolio">
+      <!-- ─── Portfolio ──────────────────────────────────────────────── -->
+      <section
+        id="portfolio"
+        class="portfolio"
+        aria-labelledby="portfolio-heading"
+      >
         <div class="main-title">
-          <h2>Featured <span>Projects</span></h2>
+          <h2 id="portfolio-heading">Featured <span>Projects</span></h2>
         </div>
 
         <p class="port-text">
@@ -178,7 +200,7 @@
         </p>
 
         <div class="portfolios">
-          <div class="portfolio-item">
+          <article class="portfolio-item">
             <img src="img/port1.jpg" alt="PSU AI Assistant project" />
             <div class="hover-items">
               <h3>PSU AI Assistant</h3>
@@ -187,13 +209,15 @@
                 href="https://github.com/tuannguyen8/ai-and-humanities-project"
                 class="icon"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View PSU AI Assistant on GitHub"
               >
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github" aria-hidden="true"></i>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="portfolio-item">
+          <article class="portfolio-item">
             <img src="img/port2.jpg" alt="TriMet Analytics project" />
             <div class="hover-items">
               <h3>TriMet Analytics</h3>
@@ -204,13 +228,15 @@
                 href="https://github.com/sanadtm/Project-DataEng"
                 class="icon"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View TriMet Analytics on GitHub"
               >
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github" aria-hidden="true"></i>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="portfolio-item">
+          <article class="portfolio-item">
             <img src="img/port3.jpg" alt="Fitness Assistant project" />
             <div class="hover-items">
               <h3>Fitness Assistant</h3>
@@ -221,13 +247,15 @@
                 href="https://gitlab.cecs.pdx.edu/tranquha/cloud-ha-tranquha"
                 class="icon"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Fitness Assistant on GitLab"
               >
-                <i class="fab fa-gitlab"></i>
+                <i class="fab fa-gitlab" aria-hidden="true"></i>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="portfolio-item">
+          <article class="portfolio-item">
             <img src="img/port4.jpg" alt="Privacy Tracker project" />
             <div class="hover-items">
               <h3>Privacy Tracker</h3>
@@ -236,13 +264,15 @@
                 href="https://github.com/quanganhha1997/period_tracker"
                 class="icon"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Privacy Tracker on GitHub"
               >
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github" aria-hidden="true"></i>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="portfolio-item">
+          <article class="portfolio-item">
             <img src="img/port5.jpg" alt="Recipe Assistant project" />
             <div class="hover-items">
               <h3>Recipe Assistant</h3>
@@ -251,13 +281,15 @@
                 href="https://github.com/quanganhha1997/CS566-Voice-Assistant"
                 class="icon"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Recipe Assistant on GitHub"
               >
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github" aria-hidden="true"></i>
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="portfolio-item">
+          <article class="portfolio-item">
             <img src="img/port6.jpg" alt="Cinema Database project" />
             <div class="hover-items">
               <h3>Cinema DBMS</h3>
@@ -266,37 +298,43 @@
                 href="https://github.com/quanganhha1997/movie_db"
                 class="icon"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Cinema DBMS on GitHub"
               >
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github" aria-hidden="true"></i>
               </a>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section id="contact" class="contact">
+      <!-- ─── Contact ────────────────────────────────────────────────── -->
+      <section id="contact" class="contact" aria-labelledby="contact-heading">
         <div class="main-title">
-          <h2>Contact <span>Me</span></h2>
+          <h2 id="contact-heading">Contact <span>Me</span></h2>
         </div>
 
         <div class="contact-content-con">
           <div class="left-contact">
-            <h4>Say Hello!</h4>
+            <h3>Say Hello!</h3>
             <p>Let's connect and start building something amazing together.</p>
 
-            <div class="contact-icon">
+            <div class="contact-icon" role="list">
               <a
                 href="https://github.com/quanganhha1997"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="GitHub profile"
+                role="listitem"
               >
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github" aria-hidden="true"></i>
               </a>
               <a
                 href="mailto:quanganh.ht97@gmail.com"
                 aria-label="Email Anh Ha"
+                role="listitem"
               >
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -305,8 +343,9 @@
             <form
               action="https://api.web3forms.com/submit"
               method="POST"
-              class="contact-form"
               id="contact-form"
+              class="contact-form"
+              novalidate
             >
               <input
                 type="hidden"
@@ -315,8 +354,20 @@
               />
 
               <div class="input-control i-c-2">
-                <input type="text" name="name" required placeholder="NAME" />
-                <input type="email" name="email" required placeholder="EMAIL" />
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="NAME"
+                  autocomplete="name"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="EMAIL"
+                  autocomplete="email"
+                />
               </div>
 
               <div class="input-control">
@@ -324,7 +375,7 @@
                   type="text"
                   name="subject"
                   required
-                  placeholder="ENTER SUBJECT"
+                  placeholder="SUBJECT"
                 />
               </div>
 
@@ -333,16 +384,16 @@
                   name="message"
                   rows="8"
                   required
-                  placeholder="PLEASE ENTER YOUR MESSAGE HERE..."
+                  placeholder="YOUR MESSAGE..."
                 ></textarea>
               </div>
 
               <div class="submit-btn">
                 <button type="submit" class="main-btn">
                   <span class="btn-text">SEND</span>
-                  <span class="btn-icon"
-                    ><i class="fas fa-arrow-right"></i
-                  ></span>
+                  <span class="btn-icon" aria-hidden="true">
+                    <i class="fas fa-arrow-right"></i>
+                  </span>
                 </button>
               </div>
             </form>
@@ -351,19 +402,13 @@
       </section>
     </main>
 
+    <!-- ─── Footer ────────────────────────────────────────────────── -->
     <footer>
-      <p>Anh Ha</p>
+      <p>&copy; <span id="footer-year"></span> Anh Ha</p>
     </footer>
 
-    <script src="app.js"></script>
+    <!-- Scripts -->
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-    <script>
-      var typed = new Typed("#input", {
-        strings: ["Programmer", "Problem Solver", "Developer", "Dog Lover"],
-        typeSpeed: 100,
-        backSpeed: 80,
-        loop: true,
-      });
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>

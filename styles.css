@@ -1,0 +1,593 @@
+/* ─────────────────────────────────────────────────────────────────
+   styles.css — Anh Ha Portfolio
+   Sections:
+     1. Reset & Variables
+     2. Base / Typography
+     3. Navigation
+     4. Hero
+     5. Reusable Components (buttons, section titles)
+     6. About
+     7. Portfolio
+     8. Contact
+     9. Footer
+    10. Responsive
+   ───────────────────────────────────────────────────────────────── */
+
+/* ─── 1. Reset & Variables ─────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:root {
+  /* Palette */
+  --clr-bg: #faf2e6;
+  --clr-text: #3a2317;
+  --clr-accent: #a87e62;
+  --clr-white: #f7f7f7;
+  --clr-black: #000000;
+
+  /* Derived shadows */
+  --shadow-offset-1: hsl(19, 37%, 41%);
+  --shadow-offset-2: hsl(19, 37%, 51%);
+  --shadow-offset-3: hsl(19, 37%, 61%);
+
+  /* Radii */
+  --radius-sm: 14px;
+  --radius-md: 15px;
+  --radius-lg: 24px;
+  --radius-pill: 35px;
+
+  /* Spacing */
+  --section-padding-x: 10%;
+  --section-padding-y: 5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── 2. Base / Typography ─────────────────────────────────────── */
+
+body {
+  background-color: var(--clr-bg);
+  font-family: "IBM Plex Mono", "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: var(--clr-text);
+  line-height: 1.6;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ─── 3. Navigation ────────────────────────────────────────────── */
+
+#desktop-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+  background-color: var(--clr-bg);
+  border-bottom: 2px solid var(--clr-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: var(--clr-text);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  font-size: 1.5rem;
+  color: var(--clr-text);
+}
+
+.nav-links li.active a,
+.nav-links li a:hover {
+  color: var(--clr-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+/* ─── 4. Hero ──────────────────────────────────────────────────── */
+
+.header {
+  min-height: 100vh;
+  padding: var(--section-padding-y) var(--section-padding-x);
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  width: 100%;
+  gap: 4rem;
+}
+
+.left-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-header .image {
+  width: 380px;
+  height: 520px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--clr-black);
+  box-shadow:
+    10px 10px var(--shadow-offset-1),
+    20px 20px var(--shadow-offset-2),
+    30px 30px var(--shadow-offset-3);
+}
+
+.left-header .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-header .name {
+  font-size: 2.7rem;
+  font-weight: 300;
+}
+
+.right-header .name span {
+  color: var(--clr-accent);
+}
+
+.right-header p {
+  margin: 1.5rem 0;
+  line-height: 2rem;
+  max-width: 650px;
+}
+
+/* ─── 5. Reusable Components ───────────────────────────────────── */
+
+/* Button */
+.btn-con {
+  display: flex;
+  align-self: flex-start;
+}
+
+.main-btn {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--clr-text);
+  background: transparent;
+  color: var(--clr-text);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.main-btn .btn-text {
+  padding: 0 2rem;
+}
+
+.main-btn .btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-accent);
+  border-radius: 50%;
+  padding: 1rem;
+  color: var(--clr-white);
+}
+
+.main-btn:hover {
+  background-color: var(--clr-text);
+  color: var(--clr-white);
+}
+
+/* Section title */
+section {
+  min-height: 100vh;
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.main-title h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--clr-accent);
+}
+
+.main-title h2 span {
+  color: var(--clr-text);
+}
+
+/* ─── 6. About ─────────────────────────────────────────────────── */
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.left-about h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--clr-text);
+  margin-bottom: 1rem;
+}
+
+.left-about p {
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  color: var(--clr-text);
+}
+
+/* Timeline */
+.stat-title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 4rem 0 3rem;
+  color: var(--clr-text);
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem;
+  padding-bottom: 3rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 2px solid var(--clr-text);
+}
+
+.timeline-item .tl-icon {
+  position: absolute;
+  left: -27px;
+  top: -6px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-text);
+  background-color: var(--clr-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-white);
+}
+
+.timeline-item .tl-duration {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  background-color: var(--clr-accent);
+  border: 2px solid var(--clr-text);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--clr-white);
+}
+
+.timeline-item h4 {
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--clr-text);
+}
+
+.timeline-item .company {
+  display: block;
+  margin-top: -0.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--clr-accent);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+}
+
+.timeline-item p {
+  color: var(--clr-text);
+  line-height: 1.7rem;
+}
+
+/* ─── 7. Portfolio ─────────────────────────────────────────────── */
+
+.port-text {
+  padding: 0 0 2rem;
+  text-align: center;
+  color: var(--clr-text);
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 2rem;
+}
+
+.portfolios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid var(--clr-text);
+  border-radius: var(--radius-md);
+}
+
+/* Hover overlay */
+.hover-items {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--clr-text);
+  background-color: var(--clr-accent);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transform: scale(0);
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
+}
+
+.portfolio-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hover-items h3 {
+  font-size: 1.4rem;
+  color: var(--clr-white);
+  margin-bottom: 1rem;
+}
+
+.hover-items p {
+  color: var(--clr-white);
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.hover-items .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--clr-bg);
+  color: var(--clr-black);
+  font-size: 1.5rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.hover-items .icon:hover {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+/* ─── 8. Contact ───────────────────────────────────────────────── */
+
+.contact-content-con {
+  display: flex;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+
+.left-contact {
+  flex: 2;
+}
+
+.left-contact h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--clr-text);
+}
+
+.left-contact p {
+  margin: 1rem 0;
+  line-height: 2rem;
+  color: var(--clr-text);
+}
+
+.contact-icon {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.contact-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-text);
+  color: var(--clr-text);
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
+}
+
+.contact-icon a:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
+}
+
+.right-contact {
+  flex: 3;
+}
+
+/* Form fields */
+.input-control {
+  margin: 1.5rem 0;
+}
+
+.input-control input,
+.input-control textarea {
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  border-radius: 30px;
+  border: 2px solid var(--clr-text);
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  outline: none;
+  resize: none;
+}
+
+.input-control input:focus,
+.input-control textarea:focus {
+  border-color: var(--clr-accent);
+}
+
+.i-c-2 {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+}
+
+/* ─── 9. Footer ────────────────────────────────────────────────── */
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--clr-text);
+  border-top: 2px solid var(--clr-text);
+}
+
+/* ─── 10. Responsive ───────────────────────────────────────────── */
+
+@media screen and (max-width: 1100px) {
+  .header-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .btn-con {
+    align-self: center;
+  }
+
+  .right-header .name {
+    font-size: 2.3rem;
+  }
+
+  .timeline,
+  .portfolios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-content-con {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #desktop-nav {
+    height: auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section,
+  .header {
+    padding: 4rem 2rem;
+  }
+
+  .left-header .image {
+    width: 280px;
+    height: 420px;
+  }
+
+  .right-header .name {
+    font-size: 2rem;
+  }
+
+  .main-title h2 {
+    font-size: 2.5rem;
+  }
+
+  .timeline,
+  .portfolios {
+    grid-template-columns: 1fr;
+  }
+
+  .i-c-2 {
+    flex-direction: column;
+    gap: 0;
+  }
+}
