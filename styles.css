@@ -6,8 +6,7 @@
   box-sizing: border-box;
 }
 
-ul,
-ol {
+ul {
   list-style: none;
 }
 
@@ -16,7 +15,6 @@ ol {
   --clr-text: #3a2317;
   --clr-accent: #7a4f38;
   --clr-white: #f7f7f7;
-  --clr-black: #000000;
   --clr-error: #d9534f;
   --clr-success: #3c763d;
 
@@ -24,9 +22,7 @@ ol {
   --shadow-offset-2: hsl(19, 37%, 45%);
   --shadow-offset-3: hsl(19, 37%, 55%);
 
-  --radius-sm: 14px;
-  --radius-md: 15px;
-  --radius-lg: 24px;
+  --radius: 15px;
   --radius-pill: 35px;
 
   --section-padding-x: 10%;
@@ -39,7 +35,7 @@ html {
 
 body {
   background-color: var(--clr-bg);
-  font-family: "IBM Plex Mono", "Poppins", sans-serif;
+  font-family: "IBM Plex Mono", sans-serif;
   font-size: 1.1rem;
   color: var(--clr-text);
   line-height: 1.6;
@@ -125,8 +121,8 @@ img {
   width: 380px;
   height: 520px;
   overflow: hidden;
-  border-radius: var(--radius-lg);
-  border: 2px solid var(--clr-black);
+  border-radius: 24px;
+  border: 2px solid #000;
   box-shadow:
     10px 10px var(--shadow-offset-1),
     20px 20px var(--shadow-offset-2),
@@ -208,7 +204,6 @@ img {
 }
 
 section {
-  min-height: auto;
   padding: 4rem 10%;
 }
 
@@ -294,7 +289,7 @@ section,
   padding: 0.4rem 1.2rem;
   background-color: var(--clr-accent);
   border: 2px solid var(--clr-text);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   font-size: 0.9rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -374,7 +369,7 @@ section,
 
 .portfolio-item {
   position: relative;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius);
   overflow: hidden;
 }
 
@@ -387,13 +382,13 @@ section,
   height: 300px;
   object-fit: cover;
   border: 2px solid var(--clr-text);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius);
 }
 
 .hover-items {
   position: absolute;
   inset: 0;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius);
   border: 2px solid var(--clr-text);
   background-color: var(--clr-accent);
   display: flex;
@@ -438,7 +433,7 @@ section,
   height: 50px;
   border-radius: 50%;
   background-color: var(--clr-bg);
-  color: var(--clr-black);
+  color: #000;
   font-size: 1.5rem;
   transition:
     background-color 0.3s ease,
@@ -447,7 +442,7 @@ section,
 
 .hover-items .icon:hover,
 .hover-items .icon:focus-visible {
-  background-color: var(--clr-black);
+  background-color: #000;
   color: var(--clr-white);
 }
 
@@ -528,7 +523,7 @@ section,
   border-radius: 30px;
   border: 2px solid var(--clr-text);
   background-color: var(--clr-white);
-  color: var(--clr-black);
+  color: #000;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
