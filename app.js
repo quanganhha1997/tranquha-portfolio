@@ -1,12 +1,12 @@
 /* ─── 1. Active nav on scroll ─────────────────────────────────── */
 (function initNavHighlight() {
-  const sections = document.querySelectorAll("main section");
+  const sections = document.querySelectorAll("header, main section");
   const navItems = document.querySelectorAll("#desktop-nav .nav-links li");
 
   if (!sections.length || !navItems.length) return;
 
   function updateActiveNav() {
-    let currentId = "";
+    let currentId = "home";
 
     sections.forEach((section) => {
       if (window.scrollY >= section.offsetTop - section.clientHeight / 3) {
@@ -23,7 +23,37 @@
   updateActiveNav();
 })();
 
-/* ─── 2. Set current year in footer ─────────────────────────────── */
+/* ─── 2. Project filter buttons ───────────────────────────────── */
+(function initProjectFilters() {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".portfolio-item");
+
+  if (!filterButtons.length || !projectCards.length) return;
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("active-filter");
+      });
+
+      button.classList.add("active-filter");
+
+      projectCards.forEach((card) => {
+        const categories = card.dataset.category || "";
+
+        if (filter === "all" || categories.includes(filter)) {
+          card.classList.remove("hide-project");
+        } else {
+          card.classList.add("hide-project");
+        }
+      });
+    });
+  });
+})();
+
+/* ─── 3. Set current year in footer ───────────────────────────── */
 (function setFooterYear() {
   const yearEl = document.getElementById("footer-year");
 
@@ -32,21 +62,21 @@
   }
 })();
 
-/* ─── 3. Typed.js ─────────────────────────────────────────────── */
+/* ─── 4. Typed.js ─────────────────────────────────────────────── */
 (function initTyped() {
   const el = document.getElementById("typed-output");
 
   if (!el || typeof Typed === "undefined") return;
 
   new Typed("#typed-output", {
-    strings: ["Programmer", "Problem Solver", "Developer", "Dog Lover"],
+    strings: ["Developer", "Designer", "Learner", "Dog Lover"],
     typeSpeed: 100,
     backSpeed: 80,
     loop: true,
   });
 })();
 
-/* ─── 4. Contact Form Validation ──────────────────────────────── */
+/* ─── 5. Contact Form Validation ─────────────────────────────── */
 (function initFormValidation() {
   const form = document.getElementById("contact-form");
 
@@ -108,6 +138,8 @@
   }
 
   function clearStatus() {
+    if (!formStatus) return;
+
     formStatus.textContent = "";
     formStatus.classList.remove("error", "success");
   }
@@ -145,9 +177,11 @@
     if (!formIsValid) {
       event.preventDefault();
 
-      formStatus.textContent =
-        "Please fix the highlighted fields before sending.";
-      formStatus.classList.add("error");
+      if (formStatus) {
+        formStatus.textContent =
+          "Please fix the highlighted fields before sending.";
+        formStatus.classList.add("error");
+      }
 
       const firstInvalidInput = form.querySelector(".input-error");
 
@@ -158,7 +192,9 @@
       return;
     }
 
-    formStatus.textContent = "Looks good! Sending your message...";
-    formStatus.classList.add("success");
+    if (formStatus) {
+      formStatus.textContent = "Looks good! Sending your message...";
+      formStatus.classList.add("success");
+    }
   });
 })();

@@ -208,8 +208,13 @@ img {
 }
 
 section {
-  min-height: 100vh;
-  padding: var(--section-padding-y) var(--section-padding-x);
+  min-height: auto;
+  padding: 4rem 10%;
+}
+
+section,
+.header {
+  scroll-margin-top: 10px;
 }
 
 .main-title {
@@ -319,12 +324,46 @@ section {
 }
 
 .port-text {
-  padding: 0 0 2rem;
+  padding: 0 0 1.5rem;
   text-align: center;
   color: var(--clr-text);
   max-width: 850px;
   margin: 0 auto;
   line-height: 2rem;
+}
+
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.7rem 1.4rem;
+  border: 2px solid var(--clr-text);
+  border-radius: var(--radius-pill);
+  background-color: transparent;
+  color: var(--clr-text);
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible,
+.active-filter {
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
 }
 
 .portfolios {
@@ -337,6 +376,10 @@ section {
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
+}
+
+.portfolio-item.hide-project {
+  display: none;
 }
 
 .portfolio-item img {
@@ -578,10 +621,18 @@ footer {
     padding: 1rem;
   }
 
+  .logo {
+    font-size: 1.7rem;
+  }
+
   .nav-links {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
   }
 
   section,

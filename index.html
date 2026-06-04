@@ -8,7 +8,7 @@
       name="description"
       content="Anh Ha — Software Developer portfolio showcasing projects in AI, data engineering, cloud, and full-stack web development."
     />
-    <title>Anh Ha | Software Developer</title>
+    <title>Anh Ha</title>
 
     <link rel="stylesheet" href="styles.css" />
 
@@ -192,13 +192,20 @@
           <h2 id="portfolio-heading">Featured <span>Projects</span></h2>
         </div>
 
-        <p class="port-text">
-          Here are some projects I have built across AI, data engineering, cloud
-          computing, databases, and web development.
-        </p>
+        <p class="port-text">Here are some of the projects I have worked on.</p>
+
+        <div class="project-filters" aria-label="Project filters">
+          <button class="filter-btn active-filter" data-filter="all">
+            All
+          </button>
+          <button class="filter-btn" data-filter="ai">AI</button>
+          <button class="filter-btn" data-filter="cloud">Cloud</button>
+          <button class="filter-btn" data-filter="data">Data</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+        </div>
 
         <div class="portfolios">
-          <article class="portfolio-item">
+          <article class="portfolio-item" data-category="ai">
             <img src="img/port1.jpg" alt="PSU AI Assistant project" />
             <div class="hover-items">
               <h3>PSU AI Assistant</h3>
@@ -215,7 +222,7 @@
             </div>
           </article>
 
-          <article class="portfolio-item">
+          <article class="portfolio-item" data-category="cloud data">
             <img src="img/port2.jpg" alt="TriMet Analytics project" />
             <div class="hover-items">
               <h3>TriMet Analytics</h3>
@@ -234,7 +241,7 @@
             </div>
           </article>
 
-          <article class="portfolio-item">
+          <article class="portfolio-item" data-category="ai cloud">
             <img src="img/port3.jpg" alt="Fitness Assistant project" />
             <div class="hover-items">
               <h3>Fitness Assistant</h3>
@@ -253,7 +260,7 @@
             </div>
           </article>
 
-          <article class="portfolio-item">
+          <article class="portfolio-item" data-category="web">
             <img src="img/port4.jpg" alt="Privacy Tracker project" />
             <div class="hover-items">
               <h3>Privacy Tracker</h3>
@@ -270,7 +277,7 @@
             </div>
           </article>
 
-          <article class="portfolio-item">
+          <article class="portfolio-item" data-category="web ai">
             <img src="img/port5.jpg" alt="Recipe Assistant project" />
             <div class="hover-items">
               <h3>Recipe Assistant</h3>
@@ -287,7 +294,7 @@
             </div>
           </article>
 
-          <article class="portfolio-item">
+          <article class="portfolio-item" data-category="data">
             <img src="img/port6.jpg" alt="Cinema Database project" />
             <div class="hover-items">
               <h3>Cinema DBMS</h3>
