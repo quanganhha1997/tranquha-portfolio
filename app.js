@@ -4,11 +4,13 @@ const navItems = document.querySelectorAll("#desktop-nav .nav-links li");
 
 function updateActiveNav() {
   let currentId = "home";
+
   sections.forEach((section) => {
     if (window.scrollY >= section.offsetTop - section.clientHeight / 3) {
       currentId = section.getAttribute("id");
     }
   });
+
   navItems.forEach((li) => {
     li.classList.toggle("active", li.classList.contains(currentId));
   });
@@ -26,11 +28,14 @@ const projectCards = document.querySelectorAll(".portfolio-item");
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
+
     filterButtons.forEach((btn) => btn.classList.remove("active-filter"));
     button.classList.add("active-filter");
+
     projectCards.forEach((card) => {
       const match =
         filter === "all" || (card.dataset.category || "").includes(filter);
+
       card.classList.toggle("hide-project", !match);
     });
   });
@@ -38,9 +43,54 @@ filterButtons.forEach((button) => {
 
 /* ─── 3. Footer year ──────────────────────────────────────────── */
 const yearEl = document.getElementById("footer-year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-/* ─── 4. Typed.js ─────────────────────────────────────────────── */
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
+
+/* ─── 4. Portland local time in footer ────────────────────────── */
+function updateLocalTime() {
+  const timeElement = document.getElementById("timezone-display");
+
+  if (!timeElement) return;
+
+  const time = new Date().toLocaleString("en-US", {
+    timeZone: "America/Los_Angeles",
+    weekday: "short",
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  });
+
+  timeElement.textContent = `Portland, OR • ${time}`;
+}
+
+updateLocalTime();
+setInterval(updateLocalTime, 1000);
+
+/* ─── 5. Visitor counter using CountAPI ───────────────────────── */
+async function loadVisitorCount() {
+  const counter = document.getElementById("visitor-count");
+
+  if (!counter) return;
+
+  try {
+    const response = await fetch(
+      "https://api.countapi.xyz/hit/anhha-portfolio/visits",
+    );
+
+    const data = await response.json();
+
+    counter.textContent = data.value.toLocaleString();
+  } catch (error) {
+    counter.textContent = "Unavailable";
+  }
+}
+
+loadVisitorCount();
+
+/* ─── 6. Typed.js ─────────────────────────────────────────────── */
 if (document.getElementById("typed-output") && typeof Typed !== "undefined") {
   new Typed("#typed-output", {
     strings: ["Developer", "Designer", "Learner", "Dog Lover"],
@@ -50,7 +100,7 @@ if (document.getElementById("typed-output") && typeof Typed !== "undefined") {
   });
 }
 
-/* ─── 5. Contact form validation ──────────────────────────────── */
+/* ─── 7. Contact form validation ──────────────────────────────── */
 const form = document.getElementById("contact-form");
 
 if (form) {
@@ -86,9 +136,14 @@ if (form) {
   function validateField(field) {
     const valid = field.validate(field.input.value);
     const errorEl = document.getElementById(field.errorId);
+
     field.input.classList.toggle("input-error", !valid);
     field.input.classList.toggle("input-success", valid);
-    if (errorEl) errorEl.textContent = valid ? "" : field.message;
+
+    if (errorEl) {
+      errorEl.textContent = valid ? "" : field.message;
+    }
+
     return valid;
   }
 
@@ -98,6 +153,7 @@ if (form) {
         formStatus.textContent = "";
         formStatus.className = "form-status";
       }
+
       validateField(field);
     });
   });
@@ -112,11 +168,13 @@ if (form) {
 
     if (!formIsValid) {
       event.preventDefault();
+
       if (formStatus) {
         formStatus.textContent =
           "Please fix the highlighted fields before sending.";
         formStatus.classList.add("error");
       }
+
       form.querySelector(".input-error")?.focus();
       return;
     }
