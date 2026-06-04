@@ -14,15 +14,15 @@ ol {
 :root {
   --clr-bg: #faf2e6;
   --clr-text: #3a2317;
-  --clr-accent: #a87e62;
+  --clr-accent: #7a4f38;
   --clr-white: #f7f7f7;
   --clr-black: #000000;
   --clr-error: #d9534f;
   --clr-success: #3c763d;
 
-  --shadow-offset-1: hsl(19, 37%, 41%);
-  --shadow-offset-2: hsl(19, 37%, 51%);
-  --shadow-offset-3: hsl(19, 37%, 61%);
+  --shadow-offset-1: hsl(19, 37%, 35%);
+  --shadow-offset-2: hsl(19, 37%, 45%);
+  --shadow-offset-3: hsl(19, 37%, 55%);
 
   --radius-sm: 14px;
   --radius-md: 15px;
@@ -50,6 +50,14 @@ a {
   text-decoration: none;
   color: inherit;
   font-family: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--clr-text);
+  outline-offset: 4px;
 }
 
 img {
@@ -176,7 +184,7 @@ img {
 }
 
 .main-btn .btn-text {
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .main-btn .btn-icon {
@@ -184,9 +192,14 @@ img {
   align-items: center;
   justify-content: center;
   background-color: var(--clr-accent);
+  border: 1px solid var(--clr-bg);
   border-radius: 50%;
   padding: 1rem;
   color: var(--clr-white);
+}
+
+.main-btn:hover .btn-icon {
+  border-color: var(--clr-white);
 }
 
 .main-btn:hover {
@@ -345,6 +358,7 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
+  pointer-events: none;
   padding: 1.5rem;
   opacity: 0;
   transform: scale(0);
@@ -353,9 +367,11 @@ section {
     transform 0.4s ease-in-out;
 }
 
-.portfolio-item:hover .hover-items {
+.portfolio-item:hover .hover-items,
+.portfolio-item:focus-within .hover-items {
   opacity: 1;
   transform: scale(1);
+  pointer-events: auto;
 }
 
 .hover-items h3 {
@@ -386,7 +402,8 @@ section {
     color 0.3s ease;
 }
 
-.hover-items .icon:hover {
+.hover-items .icon:hover,
+.hover-items .icon:focus-visible {
   background-color: var(--clr-black);
   color: var(--clr-white);
 }
@@ -434,7 +451,8 @@ section {
     color 0.4s ease-in-out;
 }
 
-.contact-icon a:hover {
+.contact-icon a:hover,
+.contact-icon a:focus-visible {
   background-color: var(--clr-accent);
   color: var(--clr-white);
 }

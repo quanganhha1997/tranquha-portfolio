@@ -1,15 +1,4 @@
-/**
- * app.js — Anh Ha Portfolio
- *
- * Features:
- *  1. Active nav link highlight based on scroll position
- *  2. Dynamic footer copyright year
- *  3. Typed.js initialisation
- *  4. Contact form validation
- */
-
 /* ─── 1. Active nav on scroll ─────────────────────────────────── */
-
 (function initNavHighlight() {
   const sections = document.querySelectorAll("main section");
   const navItems = document.querySelectorAll("#desktop-nav .nav-links li");
@@ -34,8 +23,7 @@
   updateActiveNav();
 })();
 
-/* ─── 2. Footer year ──────────────────────────────────────────── */
-
+/* ─── 2. Set current year in footer ─────────────────────────────── */
 (function setFooterYear() {
   const yearEl = document.getElementById("footer-year");
 
@@ -45,7 +33,6 @@
 })();
 
 /* ─── 3. Typed.js ─────────────────────────────────────────────── */
-
 (function initTyped() {
   const el = document.getElementById("typed-output");
 
@@ -60,7 +47,6 @@
 })();
 
 /* ─── 4. Contact Form Validation ──────────────────────────────── */
-
 (function initFormValidation() {
   const form = document.getElementById("contact-form");
 
