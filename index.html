@@ -5,447 +5,463 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Anh Ha — Software Developer portfolio showcasing projects in AI, data engineering, cloud, and web development."
+      content="Anh Ha — application developer working across enterprise applications, databases, POS systems, cloud data, and secure web software."
     />
-    <title>Anh Ha</title>
+    <meta name="theme-color" content="#faf2e6" />
+    <meta name="author" content="Anh Ha" />
+    <link rel="canonical" href="https://quanganhha1997.github.io/tranquha-portfolio/" />
 
-    <link rel="stylesheet" href="styles.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Anh Ha Portfolio" />
+    <meta property="og:title" content="Anh Ha | Application Developer" />
+    <meta
+      property="og:description"
+      content="Application developer turning operational needs into tested, documented software across enterprise systems, data, and the web."
+    />
+    <meta property="og:url" content="https://quanganhha1997.github.io/tranquha-portfolio/" />
+    <meta
+      property="og:image"
+      content="https://quanganhha1997.github.io/tranquha-portfolio/img/photo.jpeg"
+    />
+    <meta property="og:image:alt" content="Portrait of application developer Anh Ha" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anh Ha | Application Developer" />
+    <meta
+      name="twitter:description"
+      content="Application developer turning operational needs into tested, documented software across enterprise systems, data, and the web."
+    />
+    <meta
+      name="twitter:image"
+      content="https://quanganhha1997.github.io/tranquha-portfolio/img/photo.jpeg"
+    />
+
+    <title>Anh Ha | Application Developer</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anh Ha",
+        "url": "https://quanganhha1997.github.io/tranquha-portfolio/",
+        "image": "https://quanganhha1997.github.io/tranquha-portfolio/img/photo.jpeg",
+        "jobTitle": "Application Developer",
+        "email": "quanganh.ht97@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Eugene",
+          "addressRegion": "OR",
+          "addressCountry": "US"
+        },
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "Portland State University" },
+          { "@type": "CollegeOrUniversity", "name": "Oregon State University" }
+        ],
+        "sameAs": ["https://github.com/quanganhha1997"]
+      }
+    </script>
   </head>
 
   <body>
-    <nav id="desktop-nav" aria-label="Main navigation">
-      <div class="logo">Anh Ha</div>
-      <ul class="nav-links">
-        <li class="home active"><a href="#home">Home</a></li>
-        <li class="about"><a href="#about">About</a></li>
-        <li class="portfolio"><a href="#portfolio">Projects</a></li>
-        <li class="contact"><a href="#contact">Contact</a></li>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#home" class="logo" aria-label="Anh Ha, go to home">
+        <span class="logo-mark" aria-hidden="true">AH</span>
+        <span>Anh Ha</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="#home" class="active" aria-current="location">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <header id="home" class="header">
-      <div class="header-content">
-        <div class="left-header">
-          <div class="image">
-            <img src="img/photo.jpeg" alt="Portrait of Anh Ha" />
-          </div>
-        </div>
-
-        <div class="right-header">
-          <h1 class="name">
-            Hello, I'm <span>Anh Ha.</span><br />
-            I'm a <span id="typed-output"></span>
+    <header id="home" class="hero section-shell" data-section="home">
+      <div class="hero-grid">
+        <div class="hero-copy reveal is-visible">
+          <p class="eyebrow">Application developer · Eugene, OR</p>
+          <h1>
+            Software for
+            <span class="sr-only">operations, systems, data, and teams.</span>
+            <em id="rotating-word" class="typewriter-word" aria-hidden="true">operations.</em>
           </h1>
-          <p>
-            This website provides a glimpse of my past projects and my
-            capabilities as a software developer.
+          <p class="hero-summary">
+            I turn operational needs into tested, documented applications across
+            enterprise systems, databases, cloud data, and the web.
           </p>
-          <div class="btn-con">
-            <a
-              href="Anh Ha Resume.pdf"
-              class="main-btn"
-              download
-              aria-label="Download Anh Ha resume as a PDF"
-            >
-              <span class="btn-text">Download Resume</span>
-              <span class="btn-icon" aria-hidden="true">
-                <i class="fas fa-arrow-down"></i>
-              </span>
+
+          <div class="hero-actions">
+            <a href="#portfolio" class="button button-primary">
+              Explore my work <span aria-hidden="true">↘</span>
+            </a>
+            <a href="Anh-Ha-Resume.pdf" class="text-link" download>
+              Download résumé <span aria-hidden="true">↓</span>
             </a>
           </div>
+
+          <ul class="hero-disciplines" aria-label="Areas of expertise">
+            <li>Enterprise apps</li>
+            <li>Databases</li>
+            <li>POS systems</li>
+            <li>Secure web apps</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual-wrap reveal is-visible">
+          <figure class="hero-visual" data-fallback="AH">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="img/photo-640.webp 640w, img/photo-1152.webp 1152w"
+                sizes="(max-width: 860px) 84vw, 470px"
+              />
+              <img
+                src="img/photo.jpeg"
+                alt="Anh Ha at Oregon State University"
+                width="1152"
+                height="2048"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </picture>
+          </figure>
         </div>
       </div>
+
+      <a class="scroll-cue" href="#about">
+        <span>Scroll to explore</span>
+        <span aria-hidden="true">↓</span>
+      </a>
     </header>
 
-    <main>
-      <section id="about" class="about" aria-labelledby="about-heading">
-        <div class="main-title">
-          <h2 id="about-heading">About <span>Me</span></h2>
+    <main id="main-content">
+      <section id="about" class="about section-shell" data-section="about" aria-labelledby="about-heading">
+        <div class="about-heading reveal">
+          <p class="section-label">About me</p>
+          <h2 id="about-heading">Technology that<br /><span>works in practice.</span></h2>
+          <p>
+            My background combines application development, IT operations, and
+            human-centered design. I hold an M.S. in Computer Science from Portland
+            State University and a B.S. in Computer Science and Psychology from
+            Oregon State University.
+          </p>
+          <a href="#contact" class="text-link">Start a conversation <span aria-hidden="true">↗</span></a>
         </div>
 
-        <div class="about-container">
-          <div class="left-about">
-            <h3>What I Do</h3>
-            <p>
-              Hello! I'm Anh Ha, a Computer Science graduate student at Portland
-              State University with a passion for software engineering,
-              data-driven applications, and AI-powered solutions.
-            </p>
-            <p>
-              My experience spans full-stack web development, cloud-based
-              systems, machine learning applications, and data engineering
-              projects. I enjoy building tools that solve real-world problems —
-              whether that means improving access to information, processing
-              large-scale datasets, or creating secure, user-friendly
-              applications.
-            </p>
-          </div>
-        </div>
-
-        <h3 class="stat-title">My Timeline</h3>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="tl-icon" aria-hidden="true">
-              <i class="fas fa-book"></i>
-            </div>
-            <p class="tl-duration">2015 – 2016</p>
-            <h4>Foundation Program</h4>
-            <span class="company">University of Liverpool</span>
-            <p>
-              Completed a university foundation programme that prepared me for
-              studying Computer Science and software development at degree
-              level.
-            </p>
-          </article>
-
-          <article class="timeline-item">
-            <div class="tl-icon" aria-hidden="true">
-              <i class="fas fa-book"></i>
-            </div>
-            <p class="tl-duration">2016 – 2022</p>
-            <h4>B.Sc in Computer Science</h4>
-            <span class="company">Oregon State University</span>
-            <p>
-              Earned a Bachelor's degree in Computer Science, building strong
-              foundations in software engineering, databases, algorithms, and
-              web development.
-            </p>
-          </article>
-
-          <article class="timeline-item">
-            <div class="tl-icon" aria-hidden="true">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <p class="tl-duration">2021 – 2022</p>
-            <h4>Operations Representative</h4>
-            <span class="company">Oregon State University</span>
-            <p>
-              Supported daily operations, customer service, and facility
-              management while developing communication and problem-solving
-              skills in a fast-paced environment.
-            </p>
-          </article>
-
-          <article class="timeline-item">
-            <div class="tl-icon" aria-hidden="true">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <p class="tl-duration">2021 – 2022</p>
-            <h4>University Teaching Assistant</h4>
-            <span class="company">Oregon State University</span>
-            <p>
-              Helped engineering and computer science students understand
-              technical concepts and complete project assignments.
-            </p>
-          </article>
-
-          <article class="timeline-item">
-            <div class="tl-icon" aria-hidden="true">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <p class="tl-duration">2022 – 2023</p>
-            <h4>Customer Representative</h4>
-            <span class="company">Samaritan Health Services</span>
-            <p>
-              Provided customer support and resolved service requests while
-              maintaining a positive user experience across multiple channels.
-            </p>
-          </article>
-
-          <article class="timeline-item">
-            <div class="tl-icon" aria-hidden="true">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <p class="tl-duration">2022 – Present</p>
-            <h4>IT Coordinator &amp; Developer</h4>
-            <span class="company">Lemongrass</span>
-            <p>
-              Designed and developed software solutions for restaurant
-              operations, focusing on usability, performance, and scalability.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section
-        id="portfolio"
-        class="portfolio"
-        aria-labelledby="portfolio-heading"
-      >
-        <div class="main-title">
-          <h2 id="portfolio-heading">Featured <span>Projects</span></h2>
-        </div>
-
-        <p class="port-text">Here are some of the projects I have worked on.</p>
-
-        <div class="project-filters" aria-label="Project filters">
-          <button class="filter-btn active-filter" data-filter="all">
-            All
-          </button>
-          <button class="filter-btn" data-filter="ai">AI</button>
-          <button class="filter-btn" data-filter="cloud">Cloud</button>
-          <button class="filter-btn" data-filter="data">Data</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-        </div>
-
-        <div class="portfolios">
-          <article class="portfolio-item" data-category="ai">
-            <img
-              src="img/psu-ai-assistant.png"
-              alt="PSU AI Assistant project"
-            />
-            <div class="hover-items">
-              <h3>PSU AI Assistant</h3>
-              <p>RAG chatbot using LangChain, Gemini, ChromaDB, and FastAPI.</p>
-              <a
-                href="https://github.com/tuannguyen8/ai-and-humanities-project"
-                class="icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View PSU AI Assistant on GitHub"
-              >
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
+        <div class="timeline" aria-label="Education and experience">
+          <article class="timeline-item reveal">
+            <p class="timeline-index">01</p>
+            <div>
+              <p class="timeline-date">2022—2024 · Experience</p>
+              <h3>IT Coordinator &amp; Developer</h3>
+              <p>Lemongrass · POS, online ordering, operational systems, vendor support, and React web development.</p>
             </div>
           </article>
-
-          <article class="portfolio-item" data-category="cloud data">
-            <img
-              src="img/trimet-analytics.png"
-              alt="TriMet Analytics project"
-            />
-            <div class="hover-items">
-              <h3>TriMet Analytics</h3>
-              <p>
-                Google Cloud data pipeline processing large-scale transit data.
-              </p>
-              <a
-                href="https://github.com/sanadtm/Project-DataEng"
-                class="icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View TriMet Analytics on GitHub"
-              >
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
+          <article class="timeline-item reveal">
+            <p class="timeline-index">02</p>
+            <div>
+              <p class="timeline-date">2023 · Experience</p>
+              <h3>IS Desktop Solutions Tech I</h3>
+              <p>Samaritan Health Services · Windows devices, printers, peripherals, troubleshooting, documentation, and escalation.</p>
             </div>
           </article>
-
-          <article class="portfolio-item" data-category="ai cloud">
-            <img
-              src="img/fitness-assistant.png"
-              alt="Fitness Assistant project"
-            />
-            <div class="hover-items">
-              <h3>Fitness Assistant</h3>
-              <p>
-                MCP fitness bot using Gemini, Cloud Run, and nutrition APIs.
-              </p>
-              <a
-                href="https://gitlab.cecs.pdx.edu/tranquha/cloud-ha-tranquha"
-                class="icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Fitness Assistant on GitLab"
-              >
-                <i class="fab fa-gitlab" aria-hidden="true"></i>
-              </a>
+          <article class="timeline-item reveal">
+            <p class="timeline-index">03</p>
+            <div>
+              <p class="timeline-date">2022 · Experience</p>
+              <h3>Undergraduate Teaching Assistant</h3>
+              <p>Oregon State University · Algorithms, data structures, Python, debugging, and live coding for 50+ students.</p>
             </div>
           </article>
-
-          <article class="portfolio-item" data-category="web">
-            <img src="img/privacy-tracker.png" alt="Privacy Tracker project" />
-            <div class="hover-items">
-              <h3>Privacy Tracker</h3>
-              <p>Health tracking app using Attribute-Based Access Control.</p>
-              <a
-                href="https://github.com/quanganhha1997/period_tracker"
-                class="icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Privacy Tracker on GitHub"
-              >
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
+          <article class="timeline-item reveal">
+            <p class="timeline-index">04</p>
+            <div>
+              <p class="timeline-date">June 2026 · Education</p>
+              <h3>M.S. in Computer Science</h3>
+              <p>Portland State University · AI systems, cloud data pipelines, secure web applications, and data-driven development.</p>
             </div>
           </article>
-
-          <article class="portfolio-item" data-category="web ai">
-            <img
-              src="img/recipe-assistant.png"
-              alt="Recipe Assistant project"
-            />
-            <div class="hover-items">
-              <h3>Recipe Assistant</h3>
-              <p>Dialogflow voice assistant using MealDB API and Node.js.</p>
-              <a
-                href="https://github.com/quanganhha1997/CS566-Voice-Assistant"
-                class="icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Recipe Assistant on GitHub"
-              >
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
-            </div>
-          </article>
-
-          <article class="portfolio-item" data-category="data">
-            <img src="img/cinema-dbms.png" alt="Cinema Database project" />
-            <div class="hover-items">
-              <h3>Cinema DBMS</h3>
-              <p>PostgreSQL movie database with ER design and SQL analysis.</p>
-              <a
-                href="https://github.com/quanganhha1997/movie_db"
-                class="icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Cinema DBMS on GitHub"
-              >
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
+          <article class="timeline-item reveal">
+            <p class="timeline-index">05</p>
+            <div>
+              <p class="timeline-date">2022 · Education</p>
+              <h3>B.S. in Computer Science &amp; Psychology</h3>
+              <p>Oregon State University · Software engineering, cloud and mobile development, usability, and visual analytics.</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="contact" aria-labelledby="contact-heading">
-        <div class="main-title">
-          <h2 id="contact-heading">Contact <span>Me</span></h2>
+      <section id="skills" class="skills section-shell" data-section="skills" aria-labelledby="skills-heading">
+        <div class="skills-heading reveal">
+          <p class="section-label">Technical toolkit</p>
+          <h2 id="skills-heading">Applications, data, and operations.</h2>
+          <div class="skills-overview">
+            <p>
+              These technologies come from hands-on work with enterprise support,
+              database design, cloud systems, secure applications, and customer-facing software.
+            </p>
+          </div>
         </div>
 
-        <div class="contact-content-con">
-          <div class="left-contact">
-            <h3>Say Hello!</h3>
-            <p>Let's connect and start building something amazing together.</p>
+        <div class="skills-grid">
+          <article class="skill-group reveal">
+            <p class="skill-index">01</p>
+            <h3>Languages</h3>
+            <ul>
+              <li>Java</li><li>Python</li><li>JavaScript</li><li>C++</li><li>SQL</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal">
+            <p class="skill-index">02</p>
+            <h3>Applications</h3>
+            <ul>
+              <li>React</li><li>Node.js</li><li>FastAPI</li><li>REST APIs</li><li>Access control</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal">
+            <p class="skill-index">03</p>
+            <h3>Data &amp; cloud</h3>
+            <ul>
+              <li>PostgreSQL</li><li>ER modeling</li><li>Google Cloud</li><li>Cloud Run</li><li>ChromaDB</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal">
+            <p class="skill-index">04</p>
+            <h3>Enterprise systems</h3>
+            <ul>
+              <li>POS systems</li><li>Online ordering</li><li>Troubleshooting</li><li>Documentation</li><li>Vendor support</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-            <div class="contact-icon">
-              <a
-                href="https://github.com/quanganhha1997"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub profile"
-              >
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
-              <a
-                href="mailto:quanganh.ht97@gmail.com"
-                aria-label="Email Anh Ha"
-              >
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-              </a>
+      <section id="portfolio" class="projects" data-section="portfolio" aria-labelledby="portfolio-heading">
+        <div class="projects-heading section-shell reveal">
+          <div>
+            <p class="section-label">Selected work</p>
+            <h2 id="portfolio-heading">Systems, data,<br /><span>and interfaces.</span></h2>
+          </div>
+          <p>
+            Six projects spanning databases, cloud data, secure applications, AI,
+            and voice interfaces. Open a repository to explore the implementation.
+          </p>
+        </div>
+
+        <div class="project-controls section-shell reveal" aria-label="Project carousel controls">
+          <p class="project-count" aria-live="polite"><strong>01</strong> / 06</p>
+          <button type="button" class="project-arrow" data-direction="prev" aria-label="Previous project">←</button>
+          <button type="button" class="project-arrow" data-direction="next" aria-label="Next project">→</button>
+        </div>
+
+        <div class="project-stage" tabindex="-1" aria-label="Project showcase">
+          <div class="project-track">
+            <article class="project-card">
+              <figure class="project-image" data-fallback="Cinema DBMS">
+                <picture>
+                  <source type="image/webp" srcset="img/cinema-dbms-640.webp 640w, img/cinema-dbms.webp 1246w" sizes="(max-width: 760px) 86vw, (max-width: 1400px) 45vw, 700px" />
+                  <img src="img/cinema-dbms.png" alt="Cinema DBMS schema and analytics interface" width="1246" height="1263" loading="lazy" decoding="async" />
+                </picture>
+                <figcaption>Data · PostgreSQL</figcaption>
+              </figure>
+              <div class="project-copy">
+                <p class="project-number">01</p>
+                <div class="project-body">
+                  <h3>Cinema DBMS</h3>
+                  <p>Designed a normalized PostgreSQL movie database, translated ER models into relational schemas, and wrote analytical SQL for revenue and booking insights.</p>
+                  <ul class="project-tags" aria-label="Cinema DBMS technologies"><li>PostgreSQL</li><li>SQL</li><li>ER modeling</li></ul>
+                </div>
+                <a class="project-link" href="https://github.com/quanganhha1997/movie_db" target="_blank" rel="noopener noreferrer" aria-label="View the Cinema DBMS repository on GitHub; opens in a new tab">View repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <figure class="project-image" data-fallback="TriMet Analytics">
+                <picture>
+                  <source type="image/webp" srcset="img/trimet-analytics-640.webp 640w, img/trimet-analytics.webp 1280w" sizes="(max-width: 760px) 86vw, (max-width: 1400px) 45vw, 700px" />
+                  <img src="img/trimet-analytics.png" alt="TriMet Analytics transit dashboard" width="1310" height="1201" loading="lazy" decoding="async" />
+                </picture>
+                <figcaption>Cloud · Data pipeline</figcaption>
+              </figure>
+              <div class="project-copy">
+                <p class="project-number">02</p>
+                <div class="project-body">
+                  <h3>TriMet Analytics</h3>
+                  <p>Built a Google Cloud data pipeline to process large-scale transit data and turn operational records into ridership and delay analytics.</p>
+                  <ul class="project-tags" aria-label="TriMet Analytics technologies"><li>Google Cloud</li><li>Data pipelines</li><li>Analytics</li></ul>
+                </div>
+                <a class="project-link" href="https://github.com/sanadtm/Project-DataEng" target="_blank" rel="noopener noreferrer" aria-label="View the TriMet Analytics repository on GitHub; opens in a new tab">View repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <figure class="project-image" data-fallback="Privacy Tracker">
+                <picture>
+                  <source type="image/webp" srcset="img/privacy-tracker-640.webp 640w, img/privacy-tracker.webp 1247w" sizes="(max-width: 760px) 86vw, (max-width: 1400px) 45vw, 700px" />
+                  <img src="img/privacy-tracker.png" alt="Privacy Tracker health dashboard" width="1247" height="1261" loading="lazy" decoding="async" />
+                </picture>
+                <figcaption>Web · Access control</figcaption>
+              </figure>
+              <div class="project-copy">
+                <p class="project-number">03</p>
+                <div class="project-body">
+                  <h3>Privacy Tracker</h3>
+                  <p>Implemented a health-tracking web app with Attribute-Based Access Control to protect sensitive data and enforce role-aware permissions.</p>
+                  <ul class="project-tags" aria-label="Privacy Tracker technologies"><li>Web application</li><li>Access control</li><li>Security</li></ul>
+                </div>
+                <a class="project-link" href="https://github.com/quanganhha1997/period_tracker" target="_blank" rel="noopener noreferrer" aria-label="View the Privacy Tracker repository on GitHub; opens in a new tab">View repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <figure class="project-image" data-fallback="PSU AI Assistant">
+                <picture>
+                  <source type="image/webp" srcset="img/psu-ai-assistant-640.webp 640w, img/psu-ai-assistant.webp 1266w" sizes="(max-width: 760px) 86vw, (max-width: 1400px) 45vw, 700px" />
+                  <img src="img/psu-ai-assistant.png" alt="PSU AI Assistant chat interface" width="1266" height="1242" loading="lazy" decoding="async" />
+                </picture>
+                <figcaption>AI · Retrieval systems</figcaption>
+              </figure>
+              <div class="project-copy">
+                <p class="project-number">04</p>
+                <div class="project-body">
+                  <h3>PSU AI Assistant</h3>
+                  <p>Developed a retrieval-augmented assistant with asynchronous FastAPI services, LangChain, Gemini, and ChromaDB-backed knowledge retrieval.</p>
+                  <ul class="project-tags" aria-label="PSU AI Assistant technologies"><li>FastAPI</li><li>LangChain</li><li>Gemini</li><li>ChromaDB</li></ul>
+                </div>
+                <a class="project-link" href="https://github.com/tuannguyen8/ai-and-humanities-project" target="_blank" rel="noopener noreferrer" aria-label="View the PSU AI Assistant repository on GitHub; opens in a new tab">View repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <figure class="project-image" data-fallback="Fitness Assistant">
+                <picture>
+                  <source type="image/webp" srcset="img/fitness-assistant-640.webp 640w, img/fitness-assistant.webp 1271w" sizes="(max-width: 760px) 86vw, (max-width: 1400px) 45vw, 700px" />
+                  <img src="img/fitness-assistant.png" alt="Fitness Assistant workout and nutrition dashboard" width="1271" height="1237" loading="lazy" decoding="async" />
+                </picture>
+                <figcaption>AI · Cloud application</figcaption>
+              </figure>
+              <div class="project-copy">
+                <p class="project-number">05</p>
+                <div class="project-body">
+                  <h3>Fitness Assistant</h3>
+                  <p>Created an MCP-based fitness assistant that connects Gemini, Cloud Run, and nutrition APIs for contextual workout and meal guidance.</p>
+                  <ul class="project-tags" aria-label="Fitness Assistant technologies"><li>MCP</li><li>Gemini</li><li>Cloud Run</li><li>APIs</li></ul>
+                </div>
+                <p class="project-status">University repository · restricted access</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <figure class="project-image" data-fallback="Recipe Assistant">
+                <picture>
+                  <source type="image/webp" srcset="img/recipe-assistant-640.webp 640w, img/recipe-assistant.webp 1280w" sizes="(max-width: 760px) 86vw, (max-width: 1400px) 45vw, 700px" />
+                  <img src="img/recipe-assistant.png" alt="Recipe Assistant voice interface" width="1287" height="1222" loading="lazy" decoding="async" />
+                </picture>
+                <figcaption>AI · Voice experience</figcaption>
+              </figure>
+              <div class="project-copy">
+                <p class="project-number">06</p>
+                <div class="project-body">
+                  <h3>Recipe Assistant</h3>
+                  <p>Built a Dialogflow voice assistant with Node.js and MealDB integration for conversational recipe discovery and hands-free interaction.</p>
+                  <ul class="project-tags" aria-label="Recipe Assistant technologies"><li>Dialogflow</li><li>Node.js</li><li>MealDB API</li><li>Voice UI</li></ul>
+                </div>
+                <a class="project-link" href="https://github.com/quanganhha1997/CS566-Voice-Assistant" target="_blank" rel="noopener noreferrer" aria-label="View the Recipe Assistant repository on GitHub; opens in a new tab">View repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section-shell" data-section="contact" aria-labelledby="contact-heading">
+        <div class="contact-intro reveal">
+          <p class="section-label">Available for application development roles</p>
+          <h2 id="contact-heading">Have a role or<br /><span>system to discuss?</span></h2>
+          <p>
+            I’m interested in opportunities where I can contribute across requirements,
+            implementation, data, documentation, and user support.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:quanganh.ht97@gmail.com">quanganh.ht97@gmail.com <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/quanganhha1997" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile; opens in a new tab">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form reveal">
+          <input type="hidden" name="access_key" value="58ad36d1-4d06-4791-8e9c-3a382c7e9c79" />
+          <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required minlength="2" autocomplete="name" placeholder="Your name" aria-errormessage="name-error" />
+              <small class="error-message" id="name-error" aria-live="polite" aria-atomic="true"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@email.com" aria-errormessage="email-error" />
+              <small class="error-message" id="email-error" aria-live="polite" aria-atomic="true"></small>
             </div>
           </div>
 
-          <div class="right-contact">
-            <form
-              action="https://api.web3forms.com/submit"
-              method="POST"
-              id="contact-form"
-              class="contact-form"
-              novalidate
-            >
-              <input
-                type="hidden"
-                name="access_key"
-                value="58ad36d1-4d06-4791-8e9c-3a382c7e9c79"
-              />
-
-              <div class="input-control i-c-2">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="NAME"
-                    autocomplete="name"
-                  />
-                  <small class="error-message" id="name-error"></small>
-                </div>
-
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="EMAIL"
-                    autocomplete="email"
-                  />
-                  <small class="error-message" id="email-error"></small>
-                </div>
-              </div>
-
-              <div class="input-control form-group">
-                <label for="subject">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  placeholder="SUBJECT"
-                />
-                <small class="error-message" id="subject-error"></small>
-              </div>
-
-              <div class="input-control form-group">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="8"
-                  required
-                  placeholder="YOUR MESSAGE..."
-                ></textarea>
-                <small class="error-message" id="message-error"></small>
-              </div>
-
-              <p id="form-status" class="form-status" aria-live="polite"></p>
-
-              <div class="submit-btn">
-                <button type="submit" class="main-btn">
-                  <span class="btn-text">SEND</span>
-                  <span class="btn-icon" aria-hidden="true">
-                    <i class="fas fa-arrow-right"></i>
-                  </span>
-                </button>
-              </div>
-            </form>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required minlength="3" placeholder="What would you like to discuss?" aria-errormessage="subject-error" />
+            <small class="error-message" id="subject-error" aria-live="polite" aria-atomic="true"></small>
           </div>
-        </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required minlength="10" placeholder="A few details about the role, team, or project..." aria-errormessage="message-error"></textarea>
+            <small class="error-message" id="message-error" aria-live="polite" aria-atomic="true"></small>
+          </div>
+
+          <div class="form-submit">
+            <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            <button type="submit" class="button button-dark"><span class="button-label">Send message</span> <span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="form-note">Prefer email? Write directly to <a href="mailto:quanganh.ht97@gmail.com">quanganh.ht97@gmail.com</a>.</p>
+        </form>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; <span id="footer-year"></span> Anh Ha</p>
-
-      <p id="timezone-display">Portland, OR • Loading local time...</p>
-
-      <p>
-        Visitors:
-        <span id="visitor-count">Loading...</span>
-      </p>
+    <footer class="site-footer section-shell">
+      <div>
+        <a href="#home" class="footer-mark" aria-label="Back to top">AH</a>
+        <p>Application developer based in Eugene, Oregon.</p>
+      </div>
+      <div class="footer-meta">
+        <p>© <span id="footer-year"></span> Anh Ha</p>
+        <p id="timezone-display">Eugene · Pacific Time</p>
+        <a href="#home">Back to top ↑</a>
+      </div>
     </footer>
 
-    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@13.1.0/dist/motion.js" defer></script>
+    <script src="app.js" defer></script>
   </body>
 </html>
